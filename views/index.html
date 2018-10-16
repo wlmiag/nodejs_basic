@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>留言本</title>
+    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>部门</th>
+                    <th>早</th>
+                    <th>价格</th>
+                    <th>正</th>
+                    <th>价格</th>
+                    <th>夜</th>
+                    <th>价格</th>
+                    <th>合计</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{each comments}}
+                <tr>
+                    <td>{{ $value.bumencaiwu }}</td>
+                    <td>{{ $value.zao }}</td>
+                    <td>{{ $value.jiagezao }}</td>
+                    <td>{{ $value.zheng }}</td>
+                    <td>{{ $value.jiagezheng }}</td>
+                    <td>{{ $value.ye }}</td>
+                    <td>{{ $value.jiageye }}</td>
+                    <td>{{ $value.heji }}</td>
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
